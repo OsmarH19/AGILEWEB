@@ -31,14 +31,20 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!-- Favicon Icon -->
-        <img rel="icon" src="{{asset('plantilla/assets/images/favicon.png')}}">
+        {{-- <link rel="icon" src="{{asset('plantilla/assets/images/favicon.png')}}">
+        <link rel="icon"  type="image/png" href="assets/images/favicon.png"> --}}
+        <link rel="icon" href="{{asset('plantilla/assets/images/favicon.png')}}">
         <!-- Favicon Icon -->
     </head>
-
+<style>
+    body{
+        background-color: black
+    }
+</style>
     <body>
 
         <!-- Preloader Icon -->
-        <!--<div class="preloader">
+        {{-- <div class="preloader">
             <div class="loaderInner">
                 <div id="top" class="mask">
                     <div class="plane"></div>
@@ -51,7 +57,7 @@
                 </div>
                 <p>LOADING...</p>
             </div>
-        </div>-->
+        </div> --}}
         <!-- Preloader Icon -->
 
         <!-- Header Start -->
@@ -159,12 +165,12 @@
         <script src="{{asset('plantilla/assets/js/jquery.shuffle.min.js')}}"></script>
         <script src="{{asset('plantilla/assets/js/theme.js')}}"></script>
         <!-- End Include All JS -->
-
+        <section>
+            {{ $slot}}
+        </section>
     </body>
 
     <!-- Mirrored from quomodosoft.com/html/bisy/course-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Jun 2024 02:07:06 GMT -->
-    <section>
-        {{ $slot}}
-    </section>
+
     </html>
 </div>
